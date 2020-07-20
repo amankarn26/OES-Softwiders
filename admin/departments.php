@@ -106,9 +106,6 @@ include 'support/leftPanel.php';
 										   
 										   ?>
 
-
-                 
-
                                     </div>
                                                        
                                                 </div>
@@ -154,6 +151,5 @@ function myFunction() {
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 </script>
-    </body>
 
-</html>
+<?php include("support/footer.php")?>

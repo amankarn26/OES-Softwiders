@@ -9,7 +9,6 @@ include 'support/header.php';
 include 'support/navbar.php';
 include 'support/leftPanel.php';
 ?>
-
             <div class="page-inner">
                 <div class="page-title">
                     <h3>Manage Categories</h3>

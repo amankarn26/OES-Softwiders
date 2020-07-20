@@ -35,7 +35,15 @@
         <link href="../assets/css/modern.min.css" rel="stylesheet" type="text/css"/>
         <?php include 'theme.php' ?>
         <link href="../assets/css/snack.css" rel="stylesheet" type="text/css"/>
-        <link href="../assets/css/custom.css" rel="stylesheet" type="text/css"/>
+        <link href="../assets/css/custom.css" rel="stylesheet" type="text/css"/>    
+
+        <style>
+            .radioButton {
+                margin-left: -10px !important;
+                margin-top: -5px !important;
+                zoom: 2 !important;
+            }
+        </style>
         
         <script src="../assets/plugins/3d-bold-navigation/js/modernizr.js"></script>
         <script src="../assets/plugins/offcanvasmenueffects/js/snap.svg-min.js"></script>
