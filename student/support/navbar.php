@@ -1,4 +1,4 @@
-<body class="page-header-fixed">
+<body class="page-header-fixed" <?php if ($ms == "1") { print 'onload="myFunction()"'; } ?> >
         <div class="overlay"></div>
         <div class="menu-wrap">
             <nav class="profile-menu">

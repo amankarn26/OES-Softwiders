@@ -143,7 +143,13 @@ include 'support/leftPanel.php';
                                     <div class="panel-body">
 									<h3>Update login password</h3>
 			                    <form action="pages/new_pw.php" method="POST">
-								<div class="form-group">
+								
+                                <div class="form-group">
+                                <label for="exampleInputEmail1">Enter Old password</label>
+                                <input type="password" id="old_password" class="form-control" name="oldPass" required placeholder="Enter Old password">
+                                </div>
+
+                                <div class="form-group">
                                 <label for="exampleInputEmail1">Enter new password</label>
                                 <input type="password" id="password" class="form-control" name="pass1" required placeholder="Enter new password">
                                 </div>
@@ -159,7 +165,7 @@ include 'support/leftPanel.php';
 
                                            function validatePassword(){
                                             if(password.value != confirm_password.value) {
-                                           confirm_password.setCustomValidity("Passwords Don't Match");
+                                           confirm_password.setCustomValidity("New Passwords Don't Match");
                                            } else {
                                            confirm_password.setCustomValidity('');
                                             }
@@ -184,7 +190,9 @@ include 'support/leftPanel.php';
             </div>
         </main>
 		<?php if ($ms == "1") {
-?> <div class="alert alert-success" id="snackbar"><?php echo "$description"; ?></div> <?php	
+?> 
+<div class="alert alert-success" id="snackbar"><?php echo "$description"; ?></div> 
+<?php	
 }else{
 	
 }
@@ -219,6 +227,7 @@ include 'support/leftPanel.php';
 		 
 		<script>
 function myFunction() {
+    console.log("working");
     var x = document.getElementById("snackbar")
     x.className = "show";
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);

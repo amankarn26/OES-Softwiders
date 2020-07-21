@@ -137,7 +137,13 @@ include 'support/leftPanel.php';
                                     <div class="panel-body">
 									<h3>Update login password</h3>
 			                    <form action="pages/new_pw.php" method="POST">
-								<div class="form-group">
+								
+                                <div class="form-group">
+                                <label for="exampleInputEmail1">Enter Old password</label>
+                                <input type="password" id="old_password" class="form-control" name="oldPass" required placeholder="Enter Old password">
+                                </div>
+
+                                <div class="form-group">
                                 <label for="exampleInputEmail1">Enter new password</label>
                                 <input type="password" id="password" class="form-control" name="pass1" required placeholder="Enter new password">
                                 </div>

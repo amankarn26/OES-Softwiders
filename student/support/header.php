@@ -41,6 +41,8 @@
         <link href="../assets/css/themes/dark.css" class="theme-color" rel="stylesheet" type="text/css"/>
         <link href="../assets/css/custom.css" rel="stylesheet" type="text/css"/>
         
+        <link href="../assets/css/snack.css" rel="stylesheet" type="text/css"/>
+        
         <script src="../assets/plugins/3d-bold-navigation/js/modernizr.js"></script>
         <script src="../assets/plugins/offcanvasmenueffects/js/snap.svg-min.js"></script>
 

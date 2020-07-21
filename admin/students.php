@@ -123,7 +123,7 @@ include 'support/leftPanel.php';
                                                        
                                                 </div>
                                                 <div role="tabpanel" class="tab-pane fade" id="tab6">
-                                         <form action="pages/add_student.php" method="POST">
+                                         <form action="pages/add_student.php" onsubmit = "return confirm('Are you sure? You will not be able to update Enrollment Number in future');" method="POST">
 										<div class="form-group">
                                             <label for="exampleInputEmail1">First Name</label>
                                             <input type="text" class="form-control" placeholder="Enter first name" name="fname" required autocomplete="off">
