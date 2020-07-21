@@ -78,6 +78,10 @@ include 'support/leftPanel.php';
                                             <label for="exampleInputEmail1">Phone</label>
                                             <input type="text" value="<?php echo "$sdphone"; ?>" class="form-control" placeholder="Enter phone" name="phone" required autocomplete="off">
                                         </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Enrollment Number</label>
+                                            <input type="text" value="<?php echo "$student_id"; ?>" class="form-control" placeholder="Enter Enrollment Number (Student can use this for login)" name="enum" disabled autocomplete="off">
+                                        </div>
 										<div class="form-group">
                                             <label for="exampleInputEmail1">Select Academic</label>
                                             <select class="form-control" name="department" required>

@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
 	$sdcategory = $row['category'];
 	$sdavatar = $row['avatar'];
 	$sdstat = $row['acc_stat'];
-	$qrcodetxt = 'ID:'.$student_id.', NAME: '.$sdfname.' '.$sdlname.', GENDER: '.$sdgender.', ACADEMICS : '.$sddepartment.', COURSES : '.$sdcategory.'';
+	$qrcodetxt = 'Enrollment ID:'.$student_id.', NAME: '.$sdfname.' '.$sdlname.', GENDER: '.$sdgender.', ACADEMICS : '.$sddepartment.', COURSES : '.$sdcategory.'';
 
     }
 } else {
@@ -75,7 +75,7 @@ include 'support/leftPanel.php';
                                         <tbody>
                                             <tr>
                                                 <th scope="row">1</th>
-                                                <td>Registration Number</td>
+                                                <td>Enrollment Number</td>
                                                 <td><b><?php echo "$student_id"; ?></b></td>
                                              
                                             </tr>

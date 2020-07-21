@@ -146,6 +146,10 @@ include 'support/leftPanel.php';
                                             <label for="exampleInputEmail1">Phone</label>
                                             <input type="text" class="form-control" placeholder="Enter phone" name="phone" required autocomplete="off">
                                         </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Enrollment Number</label>
+                                            <input type="text" class="form-control" placeholder="Enter Enrollment Number (You will not be able to update this in future)" name="enum" required autocomplete="off">
+                                        </div>
 										<div class="form-group">
                                             <label for="exampleInputEmail1">Select Academic</label>
                                             <select class="form-control" name="department" required>
