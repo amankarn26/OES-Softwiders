@@ -23,11 +23,11 @@ include 'support/leftPanel.php';
                 </div>
                 <div id="main-wrapper">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6">
+                        <!-- <div class="col-lg-3 col-md-6">
                             <div class="panel info-box panel-white">
                                 <div class="panel-body">
                                     <div class="info-box-stats">
-                                        <p class="counter"><?php echo number_format($students_in_my_class); ?></p>
+                                        <p class="counter"><?php //echo number_format($students_in_my_class); ?></p>
                                         <span class="info-box-title">STUDENTS IN MY CLASS</span>
                                     </div>
                                     <div class="info-box-icon">
@@ -36,7 +36,7 @@ include 'support/leftPanel.php';
      
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-lg-3 col-md-6">
                             <div class="panel info-box panel-white">
                                 <div class="panel-body">
@@ -65,11 +65,11 @@ include 'support/leftPanel.php';
                             </div>
                         </div>
 						
-						                        <div class="col-lg-3 col-md-6">
+                        <!-- <div class="col-lg-3 col-md-6">
                             <div class="panel info-box panel-white">
                                 <div class="panel-body">
                                     <div class="info-box-stats">
-                                        <p class="counter"><?php echo number_format($passed_exam); ?></p>
+                                        <p class="counter"><?php //echo number_format($passed_exam); ?></p>
                                         <span class="info-box-title">PASSED EXAMS</span>
                                     </div>
                                     <div class="info-box-icon">
@@ -77,7 +77,7 @@ include 'support/leftPanel.php';
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-lg-3 col-md-6">
                             <div class="panel info-box panel-white">
                                 <div class="panel-body">
@@ -92,11 +92,11 @@ include 'support/leftPanel.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6">
+                        <!-- <div class="col-lg-3 col-md-6">
                             <div class="panel info-box panel-white">
                                 <div class="panel-body">
                                     <div class="info-box-stats">
-                                        <p><span class="counter"><?php echo number_format($failed_exam); ?></span></p>
+                                        <p><span class="counter"><?php //echo number_format($failed_exam); ?></span></p>
                                         <span class="info-box-title">FAILED EXAMS</span>
                                     </div>
                                     <div class="info-box-icon">
@@ -110,7 +110,7 @@ include 'support/leftPanel.php';
                             <div class="panel info-box panel-white">
                                 <div class="panel-body">
                                     <div class="info-box-stats">
-                                        <p class="counter"><?php echo number_format($locked_exams); ?></p>
+                                        <p class="counter"><?php //echo number_format($locked_exams); ?></p>
                                         <span class="info-box-title">LOCKED EXAMS</span>
                                     </div>
                                     <div class="info-box-icon">
@@ -118,7 +118,7 @@ include 'support/leftPanel.php';
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 						
 						<div class="col-lg-3 col-md-6">
                             <div class="panel info-box panel-white">

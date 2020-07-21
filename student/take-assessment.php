@@ -141,12 +141,12 @@ include 'support/leftPanel.php';
 												   
 												   ?></td>
                                                </tr>
-											   
+<!-- 											   
 											   <tr>
                                                    <th scope="row">6</th>
                                                    <td>Passmark</td>
-                                                   <td><?php echo "$passmark"; ?>%</td>
-                                               </tr>
+                                                   <td><?php //echo "$passmark"; ?>%</td>
+                                               </tr> -->
 											   
 											   	<tr>
                                                    <th scope="row">6</th>
@@ -245,7 +245,7 @@ include 'support/leftPanel.php';
 								if ($record_found == "1") {
 								print '
                                  <div class="alert alert-info" role="alert">
-                                  You attend this exam on <strong>'.$take_date.'</strong> , your score was <strong>'.$score.'%</strong>
+                                  You attend this exam on <strong>'.$take_date.'</strong>
                                     </div>';		
 								
 								}else{
