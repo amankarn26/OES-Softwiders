@@ -13,7 +13,7 @@ include 'support/leftPanel.php';
 
             <div class="page-inner">
                 <div class="page-title">
-                    <h3>Manage Departments</h3>
+                    <h3>Manage Academics</h3>
 
 
 
@@ -29,8 +29,8 @@ include 'support/leftPanel.php';
                                         <div role="tabpanel">
                                    
                                             <ul class="nav nav-tabs" role="tablist">
-                                                <li role="presentation" class="active"><a href="#tab5" role="tab" data-toggle="tab">Departments</a></li>
-                                                <li role="presentation"><a href="#tab6" role="tab" data-toggle="tab">Add Departments</a></li>
+                                                <li role="presentation" class="active"><a href="#tab5" role="tab" data-toggle="tab">Academics</a></li>
+                                                <li role="presentation"><a href="#tab6" role="tab" data-toggle="tab">Add Academics</a></li>
                                             </ul>
                                     
                                             <div class="tab-content">
@@ -48,7 +48,7 @@ include 'support/leftPanel.php';
                                             <tr>
                                                 <th>Name</th>
 												<th>Status</th>
-                                                <th>Department ID</th>
+                                                <th>Academic ID</th>
                                                 <th>Date Registered</th>
                                                 <th>Action</th>
                                             </tr>
@@ -57,7 +57,7 @@ include 'support/leftPanel.php';
                                             <tr>
                                                 <th>Name</th>
 												<th>Status</th>
-                                                <th>Department ID</th>
+                                                <th>Academic ID</th>
                                                 <th>Date Registered</th>
                                                 <th>Action</th>
                                             </tr>
@@ -86,7 +86,7 @@ include 'support/leftPanel.php';
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
                                                     <li>'.$stl.'</li>
-                                                    <li><a'; ?> onclick = "return confirm('Drop <?php echo $row['name']; ?> ?')" <?php print ' href="pages/drop_dep.php?id='.$row['department_id'].'">Drop Department</a></li>
+                                                    <li><a'; ?> onclick = "return confirm('Drop <?php echo $row['name']; ?> ?')" <?php print ' href="pages/drop_dep.php?id='.$row['department_id'].'">Drop Academic</a></li>
                                                 </ul>
                                             </div></td>
           
@@ -112,8 +112,8 @@ include 'support/leftPanel.php';
                                                 <div role="tabpanel" class="tab-pane fade" id="tab6">
                                          <form action="pages/add_department.php" method="POST">
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Department Name</label>
-                                            <input type="text" class="form-control" placeholder="Enter department name" name="department" required autocomplete="off">
+                                            <label for="exampleInputEmail1">Academic Name</label>
+                                            <input type="text" class="form-control" placeholder="Enter Academic name" name="department" required autocomplete="off">
                                         </div>
 
                                         <button type="submit" class="btn btn-primary">Submit</button>

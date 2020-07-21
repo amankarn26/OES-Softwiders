@@ -77,7 +77,7 @@ include 'support/leftPanel.php';
                                                 <input type="text" class="form-control" placeholder="Enter option 1" name="opt1" required autocomplete="off">
                                                 </div>
 												</td>
-                                                <td><input type="radio" name="answer" value="option1" required></td>
+                                                <td><input type="radio" name="answer" class="radioButton" value="option1" required></td>
                             
                                             </tr>
                                             <tr>
@@ -88,7 +88,7 @@ include 'support/leftPanel.php';
                                                 <input type="text" class="form-control" placeholder="Enter option 2" name="opt2" required autocomplete="off">
                                                 </div>
 												</td>
-                                                <td><input type="radio" name="answer" value="option2" required></td>
+                                                <td><input type="radio" name="answer" class="radioButton" value="option2" required></td>
                 
                                             </tr>
                                             <tr>
@@ -99,7 +99,7 @@ include 'support/leftPanel.php';
                                                 <input type="text" class="form-control" placeholder="Enter option 3" name="opt3" required autocomplete="off">
                                                 </div>
 												</td>
-                                                <td><input type="radio" name="answer" value="option3" required></td>
+                                                <td><input type="radio" name="answer" class="radioButton" value="option3" required></td>
                                 
                                             </tr>
 											
@@ -111,7 +111,7 @@ include 'support/leftPanel.php';
                                                 <input type="text" class="form-control" placeholder="Enter option 4" name="opt4" required autocomplete="off">
                                                 </div>
 												</td>
-                                                <td><input type="radio" name="answer" value="option4" required></td>
+                                                <td><input type="radio" name="answer" class="radioButton" value="option4" required></td>
                                 
                                             </tr>
                                         </tbody>

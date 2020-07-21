@@ -47,7 +47,7 @@ header("location:./");
 
 
 
-$sql = "SELECT * FROM tbl_assessment_records WHERE student_id = '$myid'";
+$sql = "SELECT * FROM tbl_assessment_records WHERE student_id = '$myid' and exam_id = '$exam_id'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -102,6 +102,14 @@ if ($conn->query($sql) === TRUE) {
         <link href="../assets/css/snack.css" rel="stylesheet" type="text/css"/>
         <script src="../assets/plugins/3d-bold-navigation/js/modernizr.js"></script>
         <script src="../assets/plugins/offcanvasmenueffects/js/snap.svg-min.js"></script>
+
+        <style>
+            .radioButton {
+                margin-left: -10px !important;
+                margin-top: -5px !important;
+                zoom: 2 !important;
+            }
+        </style>
         
     </head>
 	<body <?php if ($ms == "1") { print 'onload="myFunction()"'; } ?>   class="page-header-fixed page-horizontal-bar" >
@@ -273,10 +281,10 @@ if ($conn->query($sql) === TRUE) {
 											print '
 											<div role="tabpanel" class="tab-pane active fade in" id="tab'.$qno.'">
                                              <p><b>'.$qno.'.</b> '.$qs.'</p>
-											 <p><input type="radio" name="an'.$qno.'"  class="form-control" value="'.$op1.'"> '.$op1.'</p>
-											 <p><input type="radio" name="an'.$qno.'"  class="form-control" value="'.$op2.'"> '.$op2.'</p>
-											 <p><input type="radio" name="an'.$qno.'"  class="form-control" value="'.$op3.'"> '.$op3.'</p>
-											 <p><input type="radio" name="an'.$qno.'"  class="form-control" value="'.$op4.'"> '.$op4.'</p>
+											 <p><input type="radio" name="an'.$qno.'" class="form-control radioButton" value="'.$op1.'"> '.$op1.'</p>
+											 <p><input type="radio" name="an'.$qno.'" class="form-control radioButton" value="'.$op2.'"> '.$op2.'</p>
+											 <p><input type="radio" name="an'.$qno.'" class="form-control radioButton" value="'.$op3.'"> '.$op3.'</p>
+											 <p><input type="radio" name="an'.$qno.'" class="form-control radioButton" value="'.$op4.'"> '.$op4.'</p>
 											 <input type="hidden" name="qst'.$qno.'" value="'.base64_encode($qs).'">
 											 <input type="hidden" name="ran'.$qno.'" value="'.base64_encode($enan).'">
                                              </div>
@@ -285,10 +293,10 @@ if ($conn->query($sql) === TRUE) {
 											print '
 											<div role="tabpanel" class="tab-pane fade in" id="tab'.$qno.'">
                                              <p><b>'.$qno.'.</b> '.$qs.'</p>
-											 <p><input type="radio" name="an'.$qno.'"  class="form-control" value="'.$op1.'"> '.$op1.'</p>
-											 <p><input type="radio" name="an'.$qno.'"  class="form-control" value="'.$op2.'"> '.$op2.'</p>
-											 <p><input type="radio" name="an'.$qno.'"  class="form-control" value="'.$op3.'"> '.$op3.'</p>
-											 <p><input type="radio" name="an'.$qno.'"  class="form-control" value="'.$op4.'"> '.$op4.'</p>
+											 <p><input type="radio" name="an'.$qno.'" class="form-control radioButton" value="'.$op1.'"> '.$op1.'</p>
+											 <p><input type="radio" name="an'.$qno.'" class="form-control radioButton" value="'.$op2.'"> '.$op2.'</p>
+											 <p><input type="radio" name="an'.$qno.'" class="form-control radioButton" value="'.$op3.'"> '.$op3.'</p>
+											 <p><input type="radio" name="an'.$qno.'" class="form-control radioButton" value="'.$op4.'"> '.$op4.'</p>
 											 <input type="hidden" name="qst'.$qno.'" value="'.base64_encode($qs).'">
 											 <input type="hidden" name="ran'.$qno.'" value="'.base64_encode($enan).'">
                                              </div>

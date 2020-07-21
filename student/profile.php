@@ -97,13 +97,13 @@ include 'support/leftPanel.php';
                                             </tr>
 											<tr>
                                                 <th scope="row">9</th>
-                                                <td>Department</td>
+                                                <td>Academic</td>
                                                 <td><b><?php echo "$mydepartment"; ?></b></td>
                                                
                                             </tr>
 											<tr>
                                                 <th scope="row">10</th>
-                                                <td>Category</td>
+                                                <td>Course</td>
                                                 <td><b><?php echo "$mycategory"; ?></b></td>
                                                
                                             </tr>

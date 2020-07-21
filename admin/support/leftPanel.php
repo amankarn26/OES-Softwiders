@@ -22,8 +22,8 @@
         </div>
         <ul class="menu accordion-menu">
             <li class=<?php if($page == "index") echo "active" ?>><a href="./" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-home"></span><p>Dashboard</p></a></li>
-            <li class=<?php if($page == "departments") echo "active" ?>><a href="departments.php" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-folder-open"></span><p>Departments</p></a></li>
-            <li class=<?php if($page == "categories") echo "active" ?>><a href="categories.php" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon glyphicon-tags"></span><p>Categories</p></a></li>
+            <!-- <li class=<?php //if($page == "departments") echo "active" ?>><a href="departments.php" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-folder-open"></span><p>Academics</p></a></li> -->
+            <li class=<?php if($page == "categories") echo "active" ?>><a href="categories.php" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon glyphicon-tags"></span><p>Courses</p></a></li>
             <li class=<?php if($page == "subject") echo "active" ?>><a href="subject.php" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon glyphicon-file"></span><p>Subjects</p></a></li>
             <li class=<?php if($page == "student") echo "active" ?>><a href="students.php" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon glyphicon-user"></span><p>Students</p></a></li>
             <li class=<?php if($page == "exam") echo "active" ?>><a href="examinations.php" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-book"></span><p>Examinations</p></a></li>

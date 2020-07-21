@@ -51,7 +51,7 @@ include 'support/leftPanel.php';
                                         <thead>
                                             <tr>
                                                 <th>Name</th>
-												<th>Category</th>
+												<th>Course</th>
 												<th>Subject</th>
                                                 <th>Deadline</th>
                                                 <th>ID</th>
@@ -62,7 +62,7 @@ include 'support/leftPanel.php';
                                         <tfoot>
                                             <tr>
                                                 <th>Name</th>
-												<th>Category</th>
+												<th>Course</th>
 												<th>Subject</th>
                                                 <th>Deadline</th>
                                                 <th>ID</th>
@@ -172,9 +172,9 @@ include 'support/leftPanel.php';
                                         </div>
 										
 										<div class="form-group">
-                                            <label for="exampleInputEmail1">Select Category</label>
+                                            <label for="exampleInputEmail1">Select Course</label>
                                             <select class="form-control" name="category" required>
-											<option value="" selected disabled>-Select category-</option>
+											<option value="" selected disabled>-Select Course-</option>
 											<?php
 											include '../database/config.php';
 											$sql = "SELECT * FROM tbl_categories WHERE status = 'Active' ORDER BY name";

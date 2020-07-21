@@ -36,7 +36,7 @@ include 'support/leftPanel.php';
                                         <thead>
                                             <tr>
                                                 <th>Name</th>
-												<th>Category</th>
+												<th>Course</th>
 												<th>Subject</th>
                                                 <th>Date</th>
                                                 <th>Duration</th>
@@ -49,7 +49,7 @@ include 'support/leftPanel.php';
                                         <tfoot>
                                             <tr>
                                                 <th>Name</th>
-												<th>Category</th>
+												<th>Course</th>
 												<th>Subject</th>
                                                 <th>Date</th>
                                                 <th>Duration</th>

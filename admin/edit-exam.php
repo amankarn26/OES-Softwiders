@@ -99,9 +99,9 @@ include 'support/leftPanel.php';
                                         </div>
 										
 										<div class="form-group">
-                                            <label for="exampleInputEmail1">Select Category</label>
+                                            <label for="exampleInputEmail1">Select Course</label>
                                             <select class="form-control" name="category" required>
-											<option value="" selected disabled>-Select category-</option>
+											<option value="" selected disabled>-Select Course-</option>
 											<?php
 											include '../database/config.php';
 											$sql = "SELECT * FROM tbl_categories WHERE status = 'Active' ORDER BY name";

@@ -50,8 +50,8 @@ include 'support/leftPanel.php';
                                         <thead>
                                             <tr>
                                                 <th>Name</th>
-												<th>Category</th>
-												<th>Department</th>
+												<th>Course</th>
+												<th>Academic</th>
                                                 <th>Status</th>
                                                 <th>Date Registered</th>
                                                 <th>Action</th>
@@ -60,8 +60,8 @@ include 'support/leftPanel.php';
                                         <tfoot>
                                             <tr>
                                                 <th>Name</th>
-												<th>Category</th>
-												<th>Department</th>
+												<th>Course</th>
+												<th>Academic</th>
                                                 <th>Status</th>
                                                 <th>Date Registered</th>
                                                 <th>Action</th>
@@ -123,9 +123,9 @@ include 'support/leftPanel.php';
                                          <form action="pages/add_subject.php" method="POST">
 
 										<div class="form-group">
-                                            <label for="exampleInputEmail1">Select Department</label>
+                                            <label for="exampleInputEmail1">Select Academic</label>
                                             <select class="form-control" name="department" required>
-											<option value="" selected disabled>-Select department-</option>
+											<option value="" selected disabled>-Select Academic-</option>
 											<?php
 											include '../database/config.php';
 											$sql = "SELECT * FROM tbl_departments WHERE status = 'Active' ORDER BY name";
@@ -146,9 +146,9 @@ include 'support/leftPanel.php';
                                         </div>
 										
 										<div class="form-group">
-                                            <label for="exampleInputEmail1">Select Category</label>
+                                            <label for="exampleInputEmail1">Select Course</label>
                                             <select class="form-control" name="category" required>
-											<option value="" selected disabled>-Select category-</option>
+											<option value="" selected disabled>-Select Course-</option>
 											<?php
 											include '../database/config.php';
 											$sql = "SELECT * FROM tbl_categories WHERE status = 'Active' ORDER BY name";

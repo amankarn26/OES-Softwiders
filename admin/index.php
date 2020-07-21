@@ -28,7 +28,7 @@ include 'support/leftPanel.php';
                                 <div class="panel-body">
                                     <div class="info-box-stats">
                                         <p class="counter"><?php echo number_format($departments); ?></p>
-                                        <span class="info-box-title">DEPARTMENTS</span>
+                                        <span class="info-box-title">ACADEMICS</span>
                                     </div>
                                     <div class="info-box-icon">
                                         <i class="icon-folder"></i>
@@ -83,7 +83,7 @@ include 'support/leftPanel.php';
                                 <div class="panel-body">
                                     <div class="info-box-stats">
                                         <p class="counter"><?php echo number_format($categories); ?></p>
-                                        <span class="info-box-title">CATEGORIES <?php echo "$fp $pp"; ?></span>
+                                        <span class="info-box-title">COURSES <?php echo "$fp $pp"; ?></span>
                                     </div>
                                     <div class="info-box-icon">
                                         <i class="icon-tag"></i>

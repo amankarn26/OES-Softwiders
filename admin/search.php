@@ -56,7 +56,7 @@ $query = "SELECT * FROM tbl_users WHERE first_name LIKE '%$keyword%' AND role = 
                                             <tr>
                                                 <th>Name</th>
 												<th>Gender</th>
-												<th>Category</th>
+												<th>Course</th>
                                                 <th>Status</th>
                                                 <th>Date of Birth</th>
                                                 <th>Action</th>
@@ -66,7 +66,7 @@ $query = "SELECT * FROM tbl_users WHERE first_name LIKE '%$keyword%' AND role = 
                                             <tr>
                                                 <th>Name</th>
 												<th>Gender</th>
-												<th>Category</th>
+												<th>Course</th>
                                                 <th>Status</th>
                                                 <th>Date of Birth</th>
                                                 <th>Action</th>
@@ -152,9 +152,9 @@ $query = "SELECT * FROM tbl_users WHERE first_name LIKE '%$keyword%' AND role = 
                                             <input type="text" class="form-control" placeholder="Enter phone" name="phone" required autocomplete="off">
                                         </div>
 										<div class="form-group">
-                                            <label for="exampleInputEmail1">Select Department</label>
+                                            <label for="exampleInputEmail1">Select Academic</label>
                                             <select class="form-control" name="department" required>
-											<option value="" selected disabled>-Select department-</option>
+											<option value="" selected disabled>-Select Academic-</option>
 											<?php
 											include '../database/config.php';
 											$sql = "SELECT * FROM tbl_departments WHERE status = 'Active' ORDER BY name";
@@ -175,9 +175,9 @@ $query = "SELECT * FROM tbl_users WHERE first_name LIKE '%$keyword%' AND role = 
                                         </div>
 										
 										<div class="form-group">
-                                            <label for="exampleInputEmail1">Select Category</label>
+                                            <label for="exampleInputEmail1">Select Course</label>
                                             <select class="form-control" name="category" required>
-											<option value="" selected disabled>-Select category-</option>
+											<option value="" selected disabled>-Select Course-</option>
 											<?php
 											include '../database/config.php';
 											$sql = "SELECT * FROM tbl_categories WHERE status = 'Active' ORDER BY name";

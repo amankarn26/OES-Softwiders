@@ -37,8 +37,8 @@ include 'support/leftPanel.php';
                                         <thead>
                                             <tr>
                                                 <th>Name</th>
-												<th>Category</th>
-												<th>Department</th>
+												<th>Course</th>
+												<th>Academic</th>
                                                 <th>Status</th>
                                                 <th>Date Registered</th>
                                    
@@ -47,8 +47,8 @@ include 'support/leftPanel.php';
                                         <tfoot>
                                             <tr>
                                                 <th>Name</th>
-												<th>Category</th>
-												<th>Department</th>
+												<th>Course</th>
+												<th>Academic</th>
                                                 <th>Status</th>
                                                 <th>Date Registered</th>
                                            
