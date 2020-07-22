@@ -11,7 +11,7 @@
         <meta name="keywords" content="Online Examination System" />
         <meta name="author" content="Softwiders" />
         
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap' rel='stylesheet' type='text/css'>
         <link href="../assets/plugins/pace-master/themes/blue/pace-theme-flash.css" rel="stylesheet"/>
         <link href="../assets/plugins/uniform/css/uniform.default.min.css" rel="stylesheet"/>
         <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>

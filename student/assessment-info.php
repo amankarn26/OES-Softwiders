@@ -68,7 +68,8 @@ include 'support/leftPanel.php';
 											    <tr>
                                                    <th scope="row">3</th>
                                                    <td>Score</td>
-                                                   <td><?php echo "$score"; ?>%</td>
+                                                   <!-- <td><?php //echo "$score"; ?>%</td> -->
+                                                   <td>Get your score from the Your Institute</td>
                                                </tr>
 
 											   
