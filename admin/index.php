@@ -124,7 +124,7 @@ include 'support/leftPanel.php';
                                 <div class="panel-body">
                                     <div class="info-box-stats">
                                         <p class="counter"><?php echo number_format($banned_students); ?></p>
-                                        <span class="info-box-title">BLACKLIST STUDENTS</span>
+                                        <span class="info-box-title">INACTIVE STUDENTS</span>
                                     </div>
                                     <div class="info-box-icon">
                                         <i class="icon-lock"></i>
