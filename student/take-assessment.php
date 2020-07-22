@@ -1,7 +1,28 @@
 <?php include 'includes/check_user.php';
 
 if (isset($_GET['id'])) {
-include '../database/config.php';	
+include '../database/config.php';
+
+
+// check user is inactive or not 
+$sql = "SELECT * FROM tbl_users WHERE user_id = '$myid'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+
+        $accstat = $row['acc_stat'];
+        
+		if ($accstat == "0") {
+			header("location: examinations.php?rp=5732");	
+        }
+
+    }
+}
+
+
+
 $exam_id = mysqli_real_escape_string($conn, $_GET['id']);
 $record_found = 0;
 $sql = "SELECT * FROM tbl_examinations WHERE exam_id = '$exam_id' AND category = '$mycategory'";
