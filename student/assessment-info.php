@@ -70,9 +70,7 @@ include 'support/leftPanel.php';
                                                    <td>Score</td>
                                                    <!-- <td><?php //echo "$score"; ?>%</td> -->
                                                    <td>Get your score from the Your Institute</td>
-                                               </tr>
-
-											   
+                                               </tr>										   
 											  <tr>
                                                    <th scope="row">4</th>
                                                    <td>Next Re-take</td>
@@ -96,21 +94,24 @@ include 'support/leftPanel.php';
                                     <h3 class="panel-title">Status</h3>
                                 </div>
                                 <div class="panel-body">
-                                <?php
-								if ($status == "PASS") {
-								print '
-                                <div class="alert alert-success" role="alert">
-                                        Well done! You have pass this examination.
-                                    </div>';								
-								}else{
-																print '
-                                <div class="alert alert-danger" role="alert">
-                                       You have fail to pass this examination.
-                                    </div>';		
-									
-								}
-								
-								?>
+                                    <?php
+                                    // if ($status == "PASS") {
+                                    // print '
+                                    // <div class="alert alert-success" role="alert">
+                                    //         Well done! You have pass this examination.
+                                    //     </div>';								
+                                    // }else{
+                                    //                                 print '
+                                    // <div class="alert alert-danger" role="alert">
+                                    //     You have fail to pass this examination.
+                                    //     </div>';		
+                                        
+                                    // }
+                                    
+                                    ?>
+                                    <div class="alert alert-success" role="alert">
+                                        Well done! Your examination is submitted successfully.
+                                    </div>
                                 </div>
                             </div>
                         </div>
