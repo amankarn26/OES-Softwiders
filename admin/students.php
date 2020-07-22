@@ -13,9 +13,6 @@ include 'support/leftPanel.php';
             <div class="page-inner">
                 <div class="page-title">
                     <h3>Manage Students</h3>
-
-
-
                 </div>
                 <div id="main-wrapper">
                     <div class="row">
@@ -38,184 +35,176 @@ include 'support/leftPanel.php';
                                     
                                             <div class="tab-content">
                                                 <div role="tabpanel" class="tab-pane active fade in" id="tab5">
-                                           <div class="table-responsive">
-										   <?php
-										   include '../database/config.php';
-										   $sql = "SELECT * FROM tbl_users WHERE role = 'student'";
-                                           $result = $conn->query($sql);
+                                                    <div class="table-responsive">
+                                                        <?php
+                                                            include '../database/config.php';
+                                                            $sql = "SELECT * FROM tbl_users WHERE role = 'student'";
+                                                            $result = $conn->query($sql);
 
-                                           if ($result->num_rows > 0) {
-										print '
-										<table id="example" class="display table" style="width: 100%; cellspacing: 0;">
-                                        <thead>
-                                            <tr>
-                                                <th>Name</th>
-												<th>Gender</th>
-												<th>Course</th>
-                                                <th>Status</th>
-                                                <th>Date of Birth</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Name</th>
-												<th>Gender</th>
-												<th>Course</th>
-                                                <th>Status</th>
-                                                <th>Date of Birth</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </tfoot>
-                                        <tbody>';
-     
-                                           while($row = $result->fetch_assoc()) {
-											   
-											   $status = $row['acc_stat'];
-											   if ($status == "1") {
-											   $st = '<p class="text-success">ACTIVE</p>';
-											   $stl = '<a href="pages/make_sd_in.php?id='.$row['user_id'].'">Make Inactive</a>';
-											   }else{
-											   $st = '<p class="text-danger">INACTIVE</p>'; 
-                                               $stl = '<a href="pages/make_sd_ac.php?id='.$row['user_id'].'">Make Active</a>';											   
-											   }
-                                          print '
-										       <tr>
-                                                <td>'.$row['first_name'].' '.$row['last_name'].'</td>
-												<td>'.$row['gender'].'</td>
-                                                <td>'.$row['category'].'</td>
-                                                <td>'.$st.'</td>
-												<td>'.$row['dob'].'</td>
-                                                <td><div class="btn-group" role="group">
-                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                                    Select Action
-                                                    <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu" role="menu">
-                                                    <li>'.$stl.'</li>
-													<li><a href="edit-student.php?sid='.$row['user_id'].'">Edit Student</a></li>
-													<li><a href="view-student.php?sid='.$row['user_id'].'">View Student</a></li>
-                                                    <li><a'; ?> onclick = "return confirm('Drop <?php echo $row['first_name']; ?> ?')" <?php print ' href="pages/drop_sd.php?id='.$row['user_id'].'">Drop Student</a></li>
-                                                </ul>
-                                            </div></td>
-          
-                                            </tr>';
-                                           }
-										   
-										   print '
-									   </tbody>
-                                       </table>  ';
-                                            } else {
-											print '
-												<div class="alert alert-info" role="alert">
-                                        Nothing was found in database.
-                                    </div>';
-    
-                                           }
-                                           $conn->close();
-										   
-										   ?>
+                                                            if ($result->num_rows > 0) {
+                                                                print '
+                                                                <table id="example" class="display table" style="width: 100%; cellspacing: 0;">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Name</th>
+                                                                        <th>Gender</th>
+                                                                        <th>Course</th>
+                                                                        <th>Status</th>
+                                                                        <th>Date of Birth</th>
+                                                                        <th>Action</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <th>Name</th>
+                                                                        <th>Gender</th>
+                                                                        <th>Course</th>
+                                                                        <th>Status</th>
+                                                                        <th>Date of Birth</th>
+                                                                        <th>Action</th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                                <tbody>';
+                    
+                                                                while($row = $result->fetch_assoc()) {
+                                                                    
+                                                                    $status = $row['acc_stat'];
+                                                                    if ($status == "1") {
+                                                                    $st = '<p class="text-success">ACTIVE</p>';
+                                                                    $stl = '<a href="pages/make_sd_in.php?id='.$row['user_id'].'">Make Inactive</a>';
+                                                                    }else{
+                                                                    $st = '<p class="text-danger">INACTIVE</p>'; 
+                                                                    $stl = '<a href="pages/make_sd_ac.php?id='.$row['user_id'].'">Make Active</a>';											   
+                                                                    }
+                                                                    print '
+                                                                        <tr>
+                                                                            <td>'.$row['first_name'].' '.$row['last_name'].'</td>
+                                                                            <td>'.$row['gender'].'</td>
+                                                                            <td>'.$row['category'].'</td>
+                                                                            <td>'.$st.'</td>
+                                                                            <td>'.$row['dob'].'</td>
+                                                                            <td><div class="btn-group" role="group">
+                                                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                                                Select Action
+                                                                                <span class="caret"></span>
+                                                                            </button>
+                                                                            <ul class="dropdown-menu" role="menu">
+                                                                                <li>'.$stl.'</li>
+                                                                                <li><a href="edit-student.php?sid='.$row['user_id'].'">Edit Student</a></li>
+                                                                                <li><a href="view-student.php?sid='.$row['user_id'].'">View Student</a></li>
+                                                                                <li><a'; ?> onclick = "return confirm('Drop <?php echo $row['first_name']; ?> ?')" <?php print ' href="pages/drop_sd.php?id='.$row['user_id'].'">Drop Student</a></li>
+                                                                            </ul>
+                                                                        </div></td>
+                                    
+                                                                        </tr>';
+                                                                }
+                                                        
+                                                                print '
+                                                                    </tbody>
+                                                                    </table>  ';
+                                                            } 
+                                                            else {
+                                                                print '
+                                                                    <div class="alert alert-info" role="alert">
+                                                                        Nothing was found in database.
+                                                                    </div>';
+                    
+                                                            }
+                                                            $conn->close();
+                                                        
+                                                        ?>                 
 
-
-                 
-
-                                    </div>
-                                                       
+                                                    </div> 
+                                                    <a href="pages/export_student.php" class="btn btn-primary">Export Student</a>                                                      
                                                 </div>
                                                 <div role="tabpanel" class="tab-pane fade" id="tab6">
-                                         <form action="pages/add_student.php" onsubmit = "return confirm('Are you sure? You will not be able to update Enrollment Number in future');" method="POST">
-										<div class="form-group">
-                                            <label for="exampleInputEmail1">First Name</label>
-                                            <input type="text" class="form-control" placeholder="Enter first name" name="fname" required autocomplete="off">
-                                        </div>
-										<div class="form-group">
-                                            <label for="exampleInputEmail1">Last Name</label>
-                                            <input type="text" class="form-control" placeholder="Enter last name" name="lname" required autocomplete="off">
-                                        </div>
-										<div class="form-group clearfix">
-                                            <label for="exampleInputEmail1">Male</label>
-                                            <input type="radio" name="gender" value="Male" class="radioButton" required />
-                                            <label for="exampleInputEmail1">Female</label>
-                                            <input type="radio" name="gender" value="Female" class="radioButton" required />
-                                        </div>
-										<div class="form-group">
-                                            <label for="exampleInputEmail1">Email Address</label>
-                                            <input type="email" class="form-control" placeholder="Enter email address" name="email" required autocomplete="off">
-                                        </div>
-										<div class="form-group">
-                                            <label for="exampleInputEmail1">Phone</label>
-                                            <input type="text" class="form-control" placeholder="Enter phone" name="phone" required autocomplete="off">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Enrollment Number</label>
-                                            <input type="text" class="form-control" placeholder="Enter Enrollment Number (You will not be able to update this in future)" name="enum" required autocomplete="off">
-                                        </div>
-										<div class="form-group">
-                                            <label for="exampleInputEmail1">Select Academic</label>
-                                            <select class="form-control" name="department" required>
-											<option value="" selected disabled>-Select Academic-</option>
-											<?php
-											include '../database/config.php';
-											$sql = "SELECT * FROM tbl_departments WHERE status = 'Active' ORDER BY name";
-                                            $result = $conn->query($sql);
+                                                    <form action="pages/add_student.php" onsubmit = "return confirm('Are you sure? You will not be able to update Enrollment Number in future');" method="POST">
+										                <div class="form-group">
+                                                            <label for="exampleInputEmail1">First Name</label>
+                                                            <input type="text" class="form-control" placeholder="Enter first name" name="fname" required autocomplete="off">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Last Name</label>
+                                                            <input type="text" class="form-control" placeholder="Enter last name" name="lname" required autocomplete="off">
+                                                        </div>
+                                                        <div class="form-group clearfix">
+                                                            <label for="exampleInputEmail1">Male</label>
+                                                            <input type="radio" name="gender" value="Male" class="radioButton" required />
+                                                            <label for="exampleInputEmail1">Female</label>
+                                                            <input type="radio" name="gender" value="Female" class="radioButton" required />
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Email Address</label>
+                                                            <input type="email" class="form-control" placeholder="Enter email address" name="email" required autocomplete="off">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Phone</label>
+                                                            <input type="text" class="form-control" placeholder="Enter phone" name="phone" required autocomplete="off">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Enrollment Number</label>
+                                                            <input type="text" class="form-control" placeholder="Enter Enrollment Number (You will not be able to update this in future)" name="enum" required autocomplete="off">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Select Academic</label>
+                                                            <select class="form-control" name="department" required>
+                                                            <option value="" selected disabled>-Select Academic-</option>
+                                                            <?php
+                                                                include '../database/config.php';
+                                                                $sql = "SELECT * FROM tbl_departments WHERE status = 'Active' ORDER BY name";
+                                                                $result = $conn->query($sql);
 
-                                            if ($result->num_rows > 0) {
-    
-                                            while($row = $result->fetch_assoc()) {
-                                            print '<option value="'.$row['name'].'">'.$row['name'].'</option>';
-                                            }
-                                           } else {
-                          
-                                            }
-                                             $conn->close();
-											 ?>
-											
-											</select>
-                                        </div>
+                                                                if ($result->num_rows > 0) {                        
+                                                                    while($row = $result->fetch_assoc()) {
+                                                                        print '<option value="'.$row['name'].'">'.$row['name'].'</option>';
+                                                                }
+                                                                } 
+                                                                else {
+                                        
+                                                                }
+                                                                $conn->close();
+                                                            ?>                                                            
+                                                            </select>
+                                                        </div>
 										
-										<div class="form-group">
-                                            <label for="exampleInputEmail1">Select Course</label>
-                                            <select class="form-control" name="category" required>
-											<option value="" selected disabled>-Select Course-</option>
-											<?php
-											include '../database/config.php';
-											$sql = "SELECT * FROM tbl_categories WHERE status = 'Active' ORDER BY name";
-                                            $result = $conn->query($sql);
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Select Course</label>
+                                                            <select class="form-control" name="category" required>
+                                                            <option value="" selected disabled>-Select Course-</option>
+                                                            <?php
+                                                            include '../database/config.php';
+                                                            $sql = "SELECT * FROM tbl_categories WHERE status = 'Active' ORDER BY name";
+                                                            $result = $conn->query($sql);
 
-                                            if ($result->num_rows > 0) {
-    
-                                            while($row = $result->fetch_assoc()) {
-                                            print '<option value="'.$row['name'].'">'.$row['name'].'</option>';
-                                            }
-                                           } else {
-                          
-                                            }
-                                             $conn->close();
-											 ?>
-											
-											</select>
-                                        </div>
+                                                            if ($result->num_rows > 0) {
+                    
+                                                            while($row = $result->fetch_assoc()) {
+                                                            print '<option value="'.$row['name'].'">'.$row['name'].'</option>';
+                                                            }
+                                                        } else {
+                                        
+                                                            }
+                                                            $conn->close();
+                                                            ?>
+                                                            
+                                                            </select>
+                                                        </div>
 										
-									<div class="form-group">
-                                    <label >Date of Birth</label>
-                                    <input type="text" class="form-control date-picker" name="dob" required autocomplete="off" placeholder="Select date of birth">
-                                    </div>
-									
-									<div class="form-group">
-                                            <label for="exampleInputEmail1">Address</label>
-                                            <textarea style="resize: none;" rows="4" class="form-control" placeholder="Enter address" name="address" required autocomplete="off"></textarea>
-                                     </div>
-
-
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                       </form>
+									                    <div class="form-group">
+                                                            <label >Date of Birth</label>
+                                                            <input type="text" class="form-control date-picker" name="dob" required autocomplete="off" placeholder="Select date of birth">
+                                                        </div>									
+                                                        <div class="form-group">
+                                                                <label for="exampleInputEmail1">Address</label>
+                                                                <textarea style="resize: none;" rows="4" class="form-control" placeholder="Enter address" name="address" required autocomplete="off"></textarea>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                                    </form>
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
-                                </div>  
-  
+                                </div>    
                             </div>
                         </div>
 
