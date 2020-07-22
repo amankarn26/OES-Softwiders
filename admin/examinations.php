@@ -140,9 +140,9 @@ include 'support/leftPanel.php';
                                             <label for="exampleInputEmail1">Passmark (%)</label>
                                             <input type="number" class="form-control" placeholder="Enter passmark" name="passmark" required autocomplete="off">
                                         </div>
-										<div class="form-group">
+										<div class="form-group hide">
                                             <label for="exampleInputEmail1">RE exam (if you take exam then show it again after some days)</label>
-                                            <input type="number" class="form-control" placeholder="Enter days to attempt" name="attempts" required autocomplete="off">
+                                            <input type="number" class="form-control" value="200" placeholder="Enter days to attempt" name="attempts" required autocomplete="off">
                                         </div>
 									<div class="form-group">
                                     <label >Deadline</label>
@@ -160,7 +160,7 @@ include 'support/leftPanel.php';
                                             if ($result->num_rows > 0) {
     
                                             while($row = $result->fetch_assoc()) {
-                                            print '<option value="'.$row['name'].'">'.$row['name'].'</option>';
+                                            print '<option value="'.$row['name'].'">'.$row['name'].' - '.$row['category'].'</option>';
                                             }
                                            } else {
                           

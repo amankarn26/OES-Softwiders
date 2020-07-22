@@ -71,11 +71,11 @@ include 'support/leftPanel.php';
                                                    <!-- <td><?php //echo "$score"; ?>%</td> -->
                                                    <td>Get your score from the Your Institute</td>
                                                </tr>										   
-											  <tr>
+											  <!-- <tr>
                                                    <th scope="row">4</th>
                                                    <td>Next Re-take</td>
-                                                   <td><?php echo "$next_retake";?></td>
-                                               </tr>
+                                                   <td><?php //echo "$next_retake";?></td>
+                                               </tr> -->
 
                                               
                                            </tbody>

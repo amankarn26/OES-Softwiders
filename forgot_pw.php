@@ -34,14 +34,13 @@
      <body <?php if ($ms == "1") { print 'onload="myFunction()"'; } ?>  class="page-login">
         <main class="page-content">
             <div class="page-inner">
-            <img src="kashipara.png" alt="" height="100" width="250">   
                 <div id="main-wrapper">
                     <div class="row">
                         <div class="col-md-4 center">
                             <div class="login-box">
                                 <a href="./" class="logo-name text-lg text-center">Online Examination System</a>
                                 <p class="text-center m-t-md">Please enter your registration number or email.</p>
-                                <form class="m-t-md" action="pages/reset_account.php" method="POST">
+                                <form class="m-t-md" action="pages/reset_account_password.php" method="POST">
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Email or Registration No."  autocomplete="off" name="user" required>
                                     </div>

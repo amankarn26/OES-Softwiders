@@ -149,20 +149,20 @@ include 'support/leftPanel.php';
                                                    <td>Duration</td>
                                                    <td><?php echo "$duration"; ?> <b>min.</b></td>
                                                </tr>
-											   
+<!-- 											   
 											  <tr>
                                                    <th scope="row">5</th>
                                                    <td>Next Re-take</td>
                                                    <td><?php 
-												   if ($record_found == "1") {
-													 echo "$retake_date";  
-												   }else{
-													 echo "$next_retake";  
-												   }
+												//    if ($record_found == "1") {
+												// 	 echo "$retake_date";  
+												//    }else{
+												// 	 echo "$next_retake";  
+												//    }
 												   
 												   ?></td>
                                                </tr>
-<!-- 											   
+											   
 											   <tr>
                                                    <th scope="row">6</th>
                                                    <td>Passmark</td>
@@ -170,7 +170,7 @@ include 'support/leftPanel.php';
                                                </tr> -->
 											   
 											   	<tr>
-                                                   <th scope="row">6</th>
+                                                   <th scope="row">5</th>
                                                    <td>Questions</td>
                                                    <td><b><?php echo "$quest"; ?></b></td>
                                                </tr>
@@ -229,7 +229,7 @@ include 'support/leftPanel.php';
 								}else{
                                 print '
 								<div class="alert alert-warning" role="alert">
-                                You will be able to retake this exam on '.$retake_date.'
+                                You are not allowed to take Assessment Again.
                                 </div>';
 								}								
 									
