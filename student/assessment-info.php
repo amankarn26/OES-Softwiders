@@ -24,7 +24,7 @@ $conn->close();
 header("location:./");	
 }
 
-$page = "exam";
+$page = "assess";
 
 include 'support/header.php';
 include 'support/navbar.php';

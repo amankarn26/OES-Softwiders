@@ -12,9 +12,6 @@ include 'support/leftPanel.php';
             <div class="page-inner">
                 <div class="page-title">
                     <h3>Manage Courses</h3>
-
-
-
                 </div>
                 <div id="main-wrapper">
                     <div class="row">
@@ -46,9 +43,9 @@ include 'support/leftPanel.php';
                                             <tr>
                                                 <th>Name</th>
 												<th>Course ID</th>
-												<th>Status</th>
                                                 <th>Academic</th>
                                                 <th>Date Registered</th>
+                                                <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -57,8 +54,8 @@ include 'support/leftPanel.php';
                                                 <th>Name</th>
 												<th>Course ID</th>
 												<th>Status</th>
-                                                <th>Academic</th>
                                                 <th>Date Registered</th>
+                                                <th>Academic</th>
                                                 <th>Action</th>
                                             </tr>
                                         </tfoot>
@@ -77,9 +74,9 @@ include 'support/leftPanel.php';
 										       <tr>
                                                 <td>'.$row['name'].'</td>
 												<td>'.$row['category_id'].'</td>
-                                                <td>'.$st.'</td>
                                                 <td>'.$row['department'].'</td>
 												<td>'.$row['date_registered'].'</td>
+												<td>'.$st.'</td>
                                                 <td><div class="btn-group" role="group">
                                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                     Select Action

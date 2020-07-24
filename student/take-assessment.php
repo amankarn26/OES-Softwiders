@@ -96,7 +96,7 @@ $conn->close();
 header("location:./");	
 }
 
-$page = "exam";
+$page = "assess";
 
 include 'support/header.php';
 include 'support/navbar.php';
@@ -104,53 +104,50 @@ include 'support/leftPanel.php';
 
  ?>
 
-            <div class="page-inner">
-                <div class="page-title">
-                    <h3>Take Assessment</h3>
-                    <div class="page-breadcrumb">
-                        <ol class="breadcrumb">
-                            <li><a href="examinations.php">Assessments</a></li>
-                            <li class="active"><?php echo "$exam_name"; ?></li>
-                        </ol>
-                    </div>
-                </div>
-                <div id="main-wrapper">
-                    <div class="row col-md-12">
-                        <div class="col-md-6">
-                          
-                                <div class="row">
-                           <div class="panel panel-white">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">Examination Properties</h4>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="table-responsive project-stats">  
-                                       <table class="table">
-                                           </thead>
-                                           <tbody>
-                                               <tr>
-                                                   <th scope="row">1</th>
-                                                   <td>Exam Name</td>
-                                                   <td><?php echo "$exam_name"; ?></td>
-                                               </tr>
-											     <tr>
-                                                   <th scope="row">2</th>
-                                                   <td>Subject</td>
-                                                   <td><?php echo "$subject"; ?></td>
-                                               </tr>
-											    <tr>
-                                                   <th scope="row">3</th>
-                                                   <td>Deadline</td>
-                                                   <td><?php echo "$deadline"; ?></td>
-                                               </tr>
-											   
-											    <tr>
-                                                   <th scope="row">4</th>
-                                                   <td>Duration</td>
-                                                   <td><?php echo "$duration"; ?> <b>min.</b></td>
-                                               </tr>
-<!-- 											   
-											  <tr>
+    <div class="page-inner">
+        <div class="page-title">
+            <h3>Take Assessment</h3>
+            <div class="page-breadcrumb">
+                <ol class="breadcrumb">
+                    <li><a href="examinations.php">Assessments</a></li>
+                    <li class="active"><?php echo "$exam_name"; ?></li>
+                </ol>
+            </div>
+        </div>
+        <div id="main-wrapper">
+            <div class="row col-md-12">
+                <div class="col-md-6">                    
+                    <div class="row">
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Examination Properties</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive project-stats">  
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Exam Name</td>
+                                                <td><?php echo "$exam_name"; ?></td>
+                                            </tr>
+                                                <tr>
+                                                <th scope="row">2</th>
+                                                <td>Subject</td>
+                                                <td><?php echo "$subject"; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Deadline</td>
+                                                <td><?php echo "$deadline"; ?></td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <th scope="row">4</th>
+                                                <td>Duration</td>
+                                                <td><?php echo "$duration"; ?> <b>min.</b></td>
+                                            </tr>											   
+											  <!-- <tr>
                                                    <th scope="row">5</th>
                                                    <td>Next Re-take</td>
                                                    <td><?php 
@@ -169,125 +166,116 @@ include 'support/leftPanel.php';
                                                    <td><?php //echo "$passmark"; ?>%</td>
                                                </tr> -->
 											   
-											   	<tr>
-                                                   <th scope="row">5</th>
-                                                   <td>Questions</td>
-                                                   <td><b><?php echo "$quest"; ?></b></td>
-                                               </tr>
-                                              
-                                           </tbody>
-                                        </table>
-                                    </div>
+                                            <tr>
+                                                <th scope="row">5</th>
+                                                <td>Questions</td>
+                                                <td><b><?php echo "$quest"; ?></b></td>
+                                            </tr>                                              
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-   
-                                </div>
-                           
+                        </div>   
+                    </div>                           
+                </div>						
+                <div class="col-md-6">
+                    <div class="panel panel-white">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Terms and conditions</h3>
                         </div>
-						
-                           <div class="col-md-6">
-                            <div class="panel panel-white">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Terms and conditions</h3>
-                                </div>
-                                <div class="panel-body">
-                                    <?php echo "$terms"; ?>
-                                </div>
-                            </div>
-                        </div>
-						
-						<div class="col-md-6">
-                            <div class="panel panel-white">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Take Assessment</h3>
-                                </div>
-                                <div class="panel-body">
-								<?php
-								if ($record_found == "1") {
-									
-								if ($td >= 0){
-									
-								if ($dcc > 1){
-								print '
-								<div class="alert alert-warning" role="alert">
-                                The exam is already expired.
-                                </div>';
-								}else{
-								$_SESSION['current_examid'] = $exam_id;
-								$_SESSION['student_retake'] = 1;
-								print '
-                                 <div class="alert alert-success" role="alert">
-                                  You are good to go.
-                                    </div>
-
-									'; ?>
-									<a onclick="return confirm('Are you sure you want to begin ?')" class="btn btn-success" href="assessment.php">Retake Assessment</a>
-									
-									<?php	
-								}
-                                
-								}else{
-                                print '
-								<div class="alert alert-warning" role="alert">
-                                You are not allowed to take Assessment Again.
-                                </div>';
-								}								
-									
-								}else{
-								$_SESSION['current_examid'] = $exam_id;
-								$_SESSION['student_retake'] = 0;
-								print '
-                                 <div class="alert alert-success" role="alert">
-                                  You are good to go.
-                                    </div>
-
-									'; ?>
-									<a onclick="return confirm('Are you sure you want to begin ?')" class="btn btn-success" href="assessment.php">Begin Assessment</a>
-									
-									<?php
-                  									
-									
-								}
-								
-								?>
-
-									
-                                </div>
-                            </div>
-                        </div>
-						
-						<div class="col-md-6">
-                            <div class="panel panel-white">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Assessment History</h3>
-                                </div>
-                                <div class="panel-body">
-                                <?php
-								if ($record_found == "1") {
-								print '
-                                 <div class="alert alert-info" role="alert">
-                                  You attend this exam on <strong>'.$take_date.'</strong>
-                                    </div>';		
-								
-								}else{
-								print '
-                                 <div class="alert alert-info" role="alert">
-                                  No records found.
-                                    </div>';								
-									
-								}
-								
-								?>
-
-                                </div>
-                            </div>
+                        <div class="panel-body">
+                            <?php echo "$terms"; ?>
                         </div>
                     </div>
+                </div>						
+                <div class="col-md-6">
+                    <div class="panel panel-white">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Take Assessment</h3>
+                        </div>
+                        <div class="panel-body">
+                            <?php
+                                if ($record_found == "1") {
+                                    
+                                    if ($td >= 0){
+                                        
+                                    if ($dcc > 1){
+                                        print '
+                                        <div class="alert alert-warning" role="alert">
+                                        The exam is already expired.
+                                        </div>';
+                                    }
+                                    else{
+                                        $_SESSION['current_examid'] = $exam_id;
+                                        $_SESSION['student_retake'] = 1;
+                                        print '
+                                            <div class="alert alert-success" role="alert">
+                                            You are good to go.
+                                            </div>
 
+                                        '; 
+                                    ?>
+                                    <a onclick="return confirm('Are you sure you want to begin ?')" class="btn btn-success" href="assessment.php">Retake Assessment</a>
+                                    
+                                    <?php	
+                                    }
+                                
+                                }
+                                else{
+                                    print '
+                                    <div class="alert alert-warning" role="alert">
+                                    You are not allowed to take Assessment Again.
+                                    </div>';
+                                }								
+                                    
+                                }
+                                else{
+                                    $_SESSION['current_examid'] = $exam_id;
+                                    $_SESSION['student_retake'] = 0;
+                                    print '
+                                        <div class="alert alert-success" role="alert">
+                                        You are good to go.
+                                        </div>
+
+                                    '; ?>
+
+                                    <a onclick="return confirm('Are you sure you want to begin ?')" class="btn btn-success" href="assessment.php">Begin Assessment</a>
+                                    
+                                    <?php
+                                }
+                            
+                            ?>                            
+                        </div>
+                    </div>
+                </div>						
+                <div class="col-md-6">
+                    <div class="panel panel-white">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Assessment History</h3>
+                        </div>
+                        <div class="panel-body">
+                            <?php
+                                if ($record_found == "1") {
+                                print '
+                                    <div class="alert alert-info" role="alert">
+                                    You attend this exam on <strong>'.$take_date.'</strong>
+                                    </div>';		
+                                
+                                }else{
+                                print '
+                                    <div class="alert alert-info" role="alert">
+                                    No records found.
+                                    </div>';								
+                                    
+                                }                            
+                            ?>
+                        </div>
+                    </div>
                 </div>
-                
             </div>
-        </main>
+        </div>                
+    </div>
+</main>
 
         
 <?php include 'support/js.php' ?>

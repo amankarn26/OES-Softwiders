@@ -37,7 +37,7 @@ include 'support/leftPanel.php';
 										<table id="example" class="display table" style="width: 100%; cellspacing: 0;">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
+                                                <th>Exam Name</th>
 												<th>Subject</th>
 												<th>Deadline</th>
                                                 <th>Status</th>
@@ -47,7 +47,7 @@ include 'support/leftPanel.php';
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th>Name</th>
+                                                <th>Exam Name</th>
 												<th>Subject</th>
 												<th>Deadline</th>
                                                 <th>Status</th>

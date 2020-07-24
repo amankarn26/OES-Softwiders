@@ -35,26 +35,24 @@ include 'support/leftPanel.php';
 										<table id="example" class="display table" style="width: 100%; cellspacing: 0;">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
+                                                <th>Exam Name</th>
 												<th>Course</th>
 												<th>Subject</th>
                                                 <th>Date</th>
                                                 <th>Duration</th>
 												<th>Passmark</th>
-												<th>RE Exam</th>
 												<th>Status</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th>Name</th>
+                                                <th>Exam Name</th>
 												<th>Course</th>
 												<th>Subject</th>
                                                 <th>Date</th>
                                                 <th>Duration</th>
 												<th>Passmark</th>
-												<th>RE Exam</th>
 												<th>Status</th>
                                                 <th>Action</th>
                                             </tr>

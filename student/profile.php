@@ -1,10 +1,10 @@
 <?php 
 
-$page = "";
+$page = "profile";
 
 include 'includes/check_user.php';
 include 'includes/check_reply.php';
-$qrcodetxt = 'ID:'.$myid.', NAME: '.$myfname.' '.$mylname.', GENDER: '.$mygender.', DEPARTMENT : '.$mydepartment.', CATEGORY : '.$mycategory.'';
+$qrcodetxt = 'ID:'.$myid.', NAME: '.$myfname.' '.$mylname.', GENDER: '.$mygender.', ACADEMIC : '.$mydepartment.', COURSE : '.$mycategory.'';
 
 
 include 'support/header.php';

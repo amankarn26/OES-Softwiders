@@ -13,9 +13,6 @@ include 'support/leftPanel.php';
             <div class="page-inner">
                 <div class="page-title">
                     <h3>Manage Subjects</h3>
-
-
-
                 </div>
                 <div id="main-wrapper">
                     <div class="row">
@@ -52,8 +49,8 @@ include 'support/leftPanel.php';
                                                 <th>Subject Name</th>
 												<th>Course</th>
 												<th>Academic</th>
-                                                <th>Status</th>
                                                 <th>Date Registered</th>
+                                                <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -62,8 +59,8 @@ include 'support/leftPanel.php';
                                                 <th>Subject Name</th>
 												<th>Course</th>
 												<th>Academic</th>
-                                                <th>Status</th>
                                                 <th>Date Registered</th>
+                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
                                         </tfoot>
@@ -83,8 +80,8 @@ include 'support/leftPanel.php';
                                                 <td>'.$row['name'].'</td>
 												<td>'.$row['category'].'</td>
                                                 <td>'.$row['department'].'</td>
-                                                <td>'.$st.'</td>
 												<td>'.$row['date_registered'].'</td>
+                                                <td>'.$st.'</td>
                                                 <td><div class="btn-group" role="group">
                                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                     Select Action

@@ -112,7 +112,7 @@ include 'support/leftPanel.php';
                                             } else {
 											print '
 												<div class="alert alert-info" role="alert">
-                                        Nothing was found in database.
+                                        There is No result found.
                                     </div>';
     
                                            }

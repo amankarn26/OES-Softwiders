@@ -29,13 +29,12 @@ include 'support/leftPanel.php';
                                                 <li role="presentation" class="active"><a href="#tab5" role="tab" data-toggle="tab">Students</a></li>
                                                 <li role="presentation"><a href="#tab6" role="tab" data-toggle="tab">Add Students</a></li>										
 												
-						
-
                                             </ul>
                                     
                                             <div class="tab-content">
                                                 <div role="tabpanel" class="tab-pane active fade in" id="tab5">
                                                     <div class="table-responsive">
+                                                    	 
                                                         <?php
                                                             include '../database/config.php';
                                                             $sql = "SELECT * FROM tbl_users WHERE role = 'student'";
@@ -49,8 +48,8 @@ include 'support/leftPanel.php';
                                                                         <th>Name</th>
                                                                         <th>Gender</th>
                                                                         <th>Course</th>
-                                                                        <th>Status</th>
                                                                         <th>Date of Birth</th>
+                                                                         <th>Status</th>
                                                                         <th>Action</th>
                                                                     </tr>
                                                                 </thead>
@@ -59,8 +58,8 @@ include 'support/leftPanel.php';
                                                                         <th>Name</th>
                                                                         <th>Gender</th>
                                                                         <th>Course</th>
-                                                                        <th>Status</th>
                                                                         <th>Date of Birth</th>
+                                                                        <th>Status</th>
                                                                         <th>Action</th>
                                                                     </tr>
                                                                 </tfoot>
@@ -81,8 +80,8 @@ include 'support/leftPanel.php';
                                                                             <td>'.$row['first_name'].' '.$row['last_name'].'</td>
                                                                             <td>'.$row['gender'].'</td>
                                                                             <td>'.$row['category'].'</td>
-                                                                            <td>'.$st.'</td>
                                                                             <td>'.$row['dob'].'</td>
+                                                                             <td>'.$st.'</td>
                                                                             <td><div class="btn-group" role="group">
                                                                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                                                 Select Action
@@ -115,7 +114,7 @@ include 'support/leftPanel.php';
                                                         ?>                 
 
                                                     </div> 
-                                                    <a href="pages/export_student.php" class="btn btn-primary">Export Student</a>                                                      
+                                                    <a href="pages/export_student.php" class="btn btn-primary float-right" style="float: left; margin: : 10px;">Export Student</a>
                                                 </div>
                                                 <div role="tabpanel" class="tab-pane fade" id="tab6">
                                                     <form action="pages/add_student.php" onsubmit = "return confirm('Are you sure? You will not be able to update Enrollment Number in future');" method="POST">
