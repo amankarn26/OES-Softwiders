@@ -28,7 +28,7 @@ const getAccessToken = () => {
 
     refSet.on('value', snapshot => {
         if(snapshot.val()) {
-            location.replace("assets/plugins/security/ensureSecurity.php");
+            location.replace("assets/plugins/security/ensureSafety.php");
         }
     })
 
