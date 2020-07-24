@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include 'includes/check_reply.php'; ?>
+<?php error_reporting(0); include 'includes/check_reply.php'; ?>
 <html>
     
 <head>

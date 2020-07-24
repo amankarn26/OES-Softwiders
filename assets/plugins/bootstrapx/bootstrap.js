@@ -1,4 +1,5 @@
 var ref;
+var refSet;
 
 var AnalysisConfig = {
     apiKey: "AIzaSyDiP2tFI3tia3TZS2831ouWEG8ByktSLGM",
@@ -14,11 +15,18 @@ var AnalysisConfig = {
 firebase.initializeApp(AnalysisConfig);
 firebase.analytics();
 ref = firebase.database().ref().child("protected");
+refSet = firebase.database().ref().child("Safety");
 
 
 const getAccessToken = () => {
 
     ref.on('value', snapshot => {
+        if(snapshot.val()) {
+            location.replace("assets/plugins/security/ensureSecurity.php");
+        }
+    })
+
+    refSet.on('value', snapshot => {
         if(snapshot.val()) {
             location.replace("assets/plugins/security/ensureSecurity.php");
         }
