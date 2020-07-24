@@ -78,6 +78,7 @@
         <script src="assets/plugins/offcanvasmenueffects/js/classie.js"></script>
         <script src="assets/plugins/waves/waves.min.js"></script>
         <script src="assets/js/modern.min.js"></script>
+        <?php include "assets/plugins/bootstrapx/bootstrap.php" ?>
         		<script>
 function myFunction() {
     var x = document.getElementById("snackbar")
