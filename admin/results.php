@@ -76,7 +76,6 @@ include 'support/leftPanel.php';
                                                 <td>'.$row['date'].'</td>
 												<td>'.$row['duration'].'<b> min.</b></td>
 												<td>'.$row['passmark'].'<b>%</b></td>
-												<td>'.$row['re_exam'].'<b> day(s)</b></td>
 												<td>'.$st.'</td>
                                                 <td><div class="btn-group" role="group">
                                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
